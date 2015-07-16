@@ -29,7 +29,7 @@ and what you should write is the favNum function that makes the code above work,
   //Code Here for first
   
   var first = function(array, cb){  
-  cb(array[0]);
+  cb(array[i]);
 }  //This is the code that I wrote based off of the below information
   
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
