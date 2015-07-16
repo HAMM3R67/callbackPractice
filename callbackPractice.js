@@ -129,6 +129,26 @@ contains(names, 'Colt', function(result){
 
 
     //Code Here for uniq
+    
+    var uniq = function(arr, cb){         //this creates uniq as a variable with a function
+      var newArr = [];                    //this first part of the function creates a new array
+      arr.forEach(function(input, i){    //this loops through the original array "names"
+        if(newArr === 0){                //the next two lines checks to see if the newly created array has a value of 0 (or is empty)
+          newArr.push(input);            // if it does have a value of 0 this tells the function to push the input into the array
+        } else{                          //if it doesn't have a value of 0
+          var inArray = false;           //create a variable and set it equal to false (boolean value)
+            newArr.forEach(function(input2, i){   //then loop through the new array
+              if(input === input2){       //if the second input === the first input 
+                inArray = true;           //change inArray to true and start with the next iteration (basically this avoids duplicates)
+              }
+            })
+            if (inArray === false){      //if inArray is false
+              newArr.push(input);        //push the new input into the array
+            }
+          }
+        })
+      cb(newArr);                         //this syntax calls the below uniq function with the newArr
+     }
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 uniq(names, function(uniqArr){
