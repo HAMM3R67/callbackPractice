@@ -26,10 +26,19 @@ and what you should write is the favNum function that makes the code above work,
 
   //Code Here for first
   
+  var first = function(array, cb){
+  cb(array[0]);
+}
+  
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 first(names, function(firstName){
   console.log('The first name in names is ', firstName)
 });
+
+
+
+
+
 
 
 
@@ -39,6 +48,10 @@ first(names, function(firstName){
 
 
   //Code Here for last
+  
+  var last = function(array, cb) {
+    cb(array[array.length - 1])
+  }
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 last(names, function(lastName){
@@ -57,6 +70,10 @@ last(names, function(lastName){
 
 
   //Code Here for multiply
+  
+  var multiply = function(num1, num2, cb){
+    cb(num1 * num2)
+  }
 
 multiply(4, 3, function(answer){
   console.log('The answer is ', answer); //should console.log 12
