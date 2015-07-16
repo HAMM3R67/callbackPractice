@@ -182,7 +182,7 @@ uniq(names, function(uniqArr){
 
     var each = function(arr, cb){
       arr.forEach(function(input, i){
-        
+        cb(arr[i]);
       })
     }
 
