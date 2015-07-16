@@ -198,7 +198,13 @@ each(names, function(item, indice){
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
 
-
+var getUserId = function(arr, str, cb){
+  arr.forEach(function(input, i){
+    if(arr.input === '16t'){
+    cb(arr, str)
+    }
+  });
+}
 
 
  //code here for getUserById
