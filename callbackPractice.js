@@ -26,9 +26,9 @@ and what you should write is the favNum function that makes the code above work,
 
   //Code Here for first
   
-  var first = function(array, cb){
+  var first = function(array, cb){  
   cb(array[0]);
-}
+}  //This is the code that I wrote based off of the below information
   
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 first(names, function(firstName){
@@ -51,7 +51,7 @@ first(names, function(firstName){
   
   var last = function(array, cb) {
     cb(array[array.length - 1])
-  }
+  }  //This is the code that I wrote based off of the below information
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 last(names, function(lastName){
@@ -73,7 +73,7 @@ last(names, function(lastName){
   
   var multiply = function(num1, num2, cb){
     cb(num1 * num2)
-  }
+  }  //This is the code that I wrote based off of the below information
 
 multiply(4, 3, function(answer){
   console.log('The answer is ', answer); //should console.log 12
@@ -90,7 +90,26 @@ multiply(4, 3, function(answer){
 
 
   //Code Here for contains
-
+  
+  var contains = function(array, str, cb){
+    var isPresent = false;
+      array.forEach(function(input, i){
+        if(input === str){
+          isPresent = true;
+        }
+      })
+      cb(isPresent);
+  };  //This is the code that I wrote based off of the below information
+  
+  /* I am attempting to do the same thing as above but with a for loop
+  var contains = function(array, str, cb){
+    var isPresent = false;
+        for(var i = 0; i < array.length; i++){
+          
+        }
+       }
+     }
+*/
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 contains(names, 'Colt', function(result){
   if(result === true){
