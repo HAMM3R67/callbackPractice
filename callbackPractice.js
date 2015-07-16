@@ -1,6 +1,8 @@
 /* In this repo your job is to write functions to make each function call work properly.
 Below is a sample problem 
 
+//debugger - 
+
   //code here for sayHi
 
    sayHi('Hi Katie', function(thingToSay){
@@ -148,7 +150,21 @@ contains(names, 'Colt', function(result){
           }
         })
       cb(newArr);                         //this syntax calls the below uniq function with the newArr
-     }
+     };
+    /* 
+     var uniq = function(arr, cb){
+       for (var i =arr.length - 1; i >= 0; i--){
+         for(var j = arr.length - 2; j >= 0; j--){
+           debugger
+           if(arr[i] === arr[j]){
+             arr.splice(j, 1)
+             i--;
+           }
+         }
+       }
+       cb(arr);
+    }
+    */
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 uniq(names, function(uniqArr){
@@ -164,7 +180,11 @@ uniq(names, function(uniqArr){
 
 
 
-    //Code Here for each
+    var each = function(arr, cb){
+      arr.forEach(function(input, i){
+        
+      })
+    }
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 each(names, function(item, indice){
