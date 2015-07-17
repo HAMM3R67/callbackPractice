@@ -201,7 +201,7 @@ each(names, function(item, indice){
 var getUserById = function(arr, str, cb){
   arr.forEach(function(input, i){
     if(arr.input === '16t'){
-    cb(arr, str)
+    cb(arr[i], i)
     }
   });
 }
